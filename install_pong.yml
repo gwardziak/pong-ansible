@@ -2,10 +2,6 @@
 - hosts: install_pong
   become: yes
   tasks:
-     - name: "install the latest version of git"
-       yum:
-         name: git
-         state: latest
      - name: "download pong"
        get_url:
           url: https://github.com/kurehajime/pong-command/releases/download/v2.0.3/linux_386.zip
